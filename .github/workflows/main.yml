@@ -33,16 +33,20 @@ jobs:
         with:
           python-version: '3.10.1'
 
+        # Runs a set of commands using the runners shell
       - name: install
         run: |
           pip install pipenv
-          pipenv sync -d
+               pipenv sync -d
 
-      # Runs a set of commands using the runners shell
       - name: flake8
         run: |
           pipenv run flake8 .
 
       - name: pytest
         run: |
-          pipenv run pytest
+          pipenv run pytest --cov=pypro
+
+      - name: codecov
+        run: |
+          pipenv run codecov
