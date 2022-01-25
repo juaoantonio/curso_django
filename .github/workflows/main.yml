@@ -22,6 +22,16 @@ jobs:
       PIPENV_VENV_IN_PROJECT: 1
       PIPENV_IGNORE_VIRTUALENVS: 1
 
+    # Postgres setup
+    services:
+      postgres:
+        image: postgres:13.5
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+        ports: [ '5432:5432' ]
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     
