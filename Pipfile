@@ -9,6 +9,7 @@ flake8 = "*"
 gunicorn = "*"
 pytest-django = "*"
 python-decouple = "*"
+dj-database-url = "*"
 
 [dev-packages]
 pytest-cov = "*"
