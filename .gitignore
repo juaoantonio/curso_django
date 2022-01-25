@@ -130,3 +130,6 @@ dmypy.json
 
 # ASDF Files
 .tool-versions
+
+# Static files
+staticfiles/
